@@ -137,12 +137,12 @@ colSums(x)
 colMeans(x)
 
 ##lectura/escritura de datos
-data = read.csv(file = 'clases/Clase02_R/ContratosDNCP2018.csv', header = T,stringsAsFactors = F)
+data = read.csv(file = 'ContratosDNCP2018.csv', header = T,stringsAsFactors = F)
 
 	##,colClasses = c('numeric','character','character','character','character','character','character','character','character')
 
 ## row.names es el ordinal que usa R para numerar los registros
-write.csv(data,'clases/Clase02_R/output.csv',row.names = F)
+write.csv(data,'output.csv',row.names = F)
 
 str(data)   ##describir el diccionario de datos
 
