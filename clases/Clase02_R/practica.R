@@ -10,6 +10,10 @@ data$tender.procurementMethodDetails = as.factor(data$tender.procurementMethodDe
 data$status = as.factor(data$status)
 data$tender.awardCriteriaDetails = as.factor(data$tender.awardCriteriaDetails)
 
+str(data)
+
+table(data$tender.procuringEntity.name)
+
 ##barplot
 barplot(table(data$tender.additionalProcurementCategories),
         col = 'darkgreen', 
@@ -19,6 +23,7 @@ barplot(table(data$tender.additionalProcurementCategories),
 ##ggplot2
 library(stringr)
 library(ggplot2)
+
 
 ##gg barplot
 ggplot(data, aes(x=str_wrap(tender.additionalProcurementCategories,35)))+
@@ -57,6 +62,8 @@ ggplot(data, aes(x=(value.amount/1000000),fill=tender.awardCriteriaDetails))+
   geom_histogram(breaks=seq(0, 1000, by=100))+
   labs(title="Contratos por Monto", x="Monto en Mill. Gs", y="Cantidad", 
        fill="Sist. de Adj.")
+
+table(data$tender.awardCriteriaDetails)
 
 ##gg scatter plot variable numerica y categorica
 q99 = quantile(data$value.amount,probs=0.99)

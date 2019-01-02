@@ -142,7 +142,7 @@ data = read.csv(file = 'ContratosDNCP2018.csv', header = T,stringsAsFactors = F)
 	##,colClasses = c('numeric','character','character','character','character','character','character','character','character')
 
 ## row.names es el ordinal que usa R para numerar los registros
-write.csv(data,'output.csv',row.names = F)
+#write.csv(data,'output.csv',row.names = F)
 
 str(data)   ##describir el diccionario de datos
 
