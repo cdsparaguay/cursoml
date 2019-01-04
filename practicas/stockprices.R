@@ -34,7 +34,7 @@ cor(stocks$nflx, stocks$nasdaq)
 
 ## high positive r
 cor(stocks$amzn, stocks$nasdaq)
-cor(stocks$goog, stocks$nasdaq)
+cor(stocks$fox, stocks$foxa)
 
 ## correlation matrix
 corMatrix = cor(stocks[2:31])
@@ -43,7 +43,7 @@ corM05[,"nasdaq"]
 
 ## scatter plots 
 plot(x = stocks$goog, y = stocks$nasdaq)
-plot(x = stocks$msft, y = stocks$nasdaq)
+plot(x = stocks$khc, y = stocks$nasdaq)
 
 ## linear model - regresión lineal
 m1 = lm(nasdaq ~ amzn, data = stocks)
@@ -53,3 +53,6 @@ summary(m1)
 summary(m2)
 summary(m3)
 
+summary(lm(nasdaq ~ amzn + goog + aapl, data = stocks))
+
+summary(lm(nasdaq ~ khc, data = stocks))
