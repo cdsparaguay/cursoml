@@ -57,24 +57,18 @@ summary(lm(nasdaq ~ amzn + goog + aapl, data = stocks))
 summary(lm(nasdaq ~ khc, data = stocks))
 
 ## Principal Component Analysis (PCA)
-train = head(stocks[2:31], 188)
-pcaStocks = prcomp(train[1:29], scale = TRUE)
+pcaStocks = prcomp(stocks[2:30], scale = TRUE)
 screeplot(pcaStocks)
 summary(pcaStocks)
 
 ## 90% cumulative proportion of variance con PC1-5
-trainUnificado = cbind(pcaStocks$x[,1:5], train[30])
+trainUnificado = head(cbind(pcaStocks$x[,1:5], stocks[31]), 188)
 m = lm(nasdaq ~ PC1 + PC2 + PC3 + PC4 + PC5, data = trainUnificado)
 summary(m)
 matplot(cbind(trainUnificado$nasdaq,m$fitted.values),type="l",col=c("red","green"),lty=c(1,1))
 
 ## validation
-validation = tail(stocks[2:31], 62)
-pcaStocksVal = prcomp(validation[1:29], scale = TRUE)
-screeplot(pcaStocksVal)
-summary(pcaStocksVal)
-
-validationUnificado = cbind(pcaStocksVal$x[,1:5], validation[30])
+validationUnificado = tail(cbind(pcaStocks$x[,1:5], stocks[31]),62)
 p = predict(m, validationUnificado, se.fit = TRUE)
 matplot(cbind(validationUnificado$nasdaq,p$fit),type="l",col=c("red","green"),lty=c(1,1))
 
