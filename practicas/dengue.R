@@ -42,3 +42,52 @@ p4NonNeg[p4NonNeg < 0] = 0
 ## plot real vs predicted
 matplot(cbind(validation$cantidad,p4NonNeg),type="l",col=c("red","green"),lty=c(1,1))
 
+######################################
+## PCA
+pcaDatos = prcomp(datosFiltrados[1:12], scale = TRUE)
+screeplot(pcaDatos)
+summary(pcaDatos)
+
+## 90% cummulative proportion of variance con PC1-4
+trainUnificado = head(cbind(pcaDatos$x[,1:4], datosFiltrados[13]), 230)
+m = lm(cantidad ~ PC1 + PC2 + PC3 + PC4, data = trainUnificado)
+summary(m)
+mNonNeg = m$fitted.values
+mNonNeg[mNonNeg < 0] = 0
+matplot(cbind(trainUnificado$cantidad,mNonNeg),type="l",col=c("red","green"),lty=c(1,1))
+
+## validation
+validationUnificado = tail(cbind(pcaDatos$x[,1:4], datosFiltrados[13]) , 98)
+p = predict(m, validationUnificado, se.fit = TRUE)
+pNonNeg = p$fit
+pNonNeg[pNonNeg < 0] = 0
+matplot(cbind(validationUnificado$cantidad,pNonNeg),type="l",col=c("red","green"),lty=c(1,1))
+
+######################################
+## PCA con datos completos originales
+datos2 = cbind(datos[12:99], datos[101:111], datos[100])
+pcaDatos2 = prcomp(datos2[1:99], scale = TRUE)
+screeplot(pcaDatos2)
+summary(pcaDatos2)
+
+## 90% cummulative proportion of variance con PC1-26
+trainUnificado = head(cbind(pcaDatos2$x[,1:26], datos2[100]), 230)
+m = lm(cantidad ~ PC1 + PC2 + PC3 + PC4 +
+                  PC5 + PC6 + PC7 + PC8 +
+                  PC9 + PC10 + PC11 + PC12 +
+                  PC13 + PC14 + PC15 + PC16 +
+                  PC17 + PC18 + PC19 + PC20 +
+                  PC21 + PC22 + PC23 + PC24 +
+                  PC25 + PC26, data = trainUnificado)
+summary(m)
+mNonNeg = m$fitted.values
+mNonNeg[mNonNeg < 0] = 0
+matplot(cbind(trainUnificado$cantidad,mNonNeg),type="l",col=c("red","green"),lty=c(1,1))
+
+## validation
+validationUnificado = tail(cbind(pcaDatos2$x[,1:26], datos2[100]) , 98)
+p = predict(m, validationUnificado, se.fit = TRUE)
+pNonNeg = p$fit
+pNonNeg[pNonNeg < 0] = 0
+matplot(cbind(validationUnificado$cantidad,pNonNeg),type="l",col=c("red","green"),lty=c(1,1))
+
