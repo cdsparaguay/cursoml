@@ -1,5 +1,5 @@
 ## set working directory
-## setwd("~/MEGAsync/CDS/cursoml/practicas/data")
+setwd("~/MEGAsync/CDS/cursoml/practicas/data")
 
 ## libs
 library(stringr)
@@ -118,7 +118,6 @@ contratosFiltrados = contratos[,c("nro_licitacion",
                                    "urgencia_impostergable",
                                    "seguridad_nacional",
                                    "precalificacion",
-                                   "con_proceso",
                                    "fecha_publicacion_lla", 
                                    "anho_fecha_publicacion_lla",
                                    "mesnro_fecha_publicacion_lla",
@@ -145,5 +144,5 @@ contratosFiltrados = contratos[,c("nro_licitacion",
                                    "diasPublicacionContrato",
                                    "diasAmpliacionContrato")]
 
-write.csv(contratosFiltrados,'contratos_17_18_procesados.csv',row.names = T)
+write.csv(contratosFiltrados,'contratos_17_18_procesados.csv',row.names = F, na = "")
 
