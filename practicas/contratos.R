@@ -7,7 +7,7 @@ library(ggplot2)
 library(dplyr)
 
 ## stock prices
-contratos = read.csv(file = 'contratos_17_18.csv', header = T, stringsAsFactors = F, sep = ";")
+contratos = read.csv(file = 'dataset_contratos_nuevo.csv', header = T, stringsAsFactors = F, sep = ";")
 
 ## convertir tipos de atributos a utilizar
 contratos$nro_licitacion = contratos$nro_licitacion*1000
@@ -29,6 +29,11 @@ contratos$con_proceso = as.logical(contratos$con_proceso)
 ## fecha de adenda, convertir nulos a NA y luego aplicar a Date la columna
 contratos$fecha_publicacion_amp[which(contratos$fecha_publicacion_amp == "null")] = NA
 contratos$fecha_publicacion_amp = as.Date(contratos$fecha_publicacion_amp)
+
+## con_suspension, convertir nulos a FALSE y IMP_SUS a TRUE
+contratos$con_suspension[which(contratos$con_suspension == "null")] = FALSE
+contratos$con_suspension[which(contratos$con_suspension == "IMP_SUS")] = TRUE
+contratos$con_suspension = as.logical(contratos$con_suspension)
 
 ## split marcas en columnas logicas
 contratos = mutate(contratos, plurianual=(grepl('plurianual',contratos$marcas)))
@@ -118,6 +123,7 @@ contratosFiltrados = contratos[,c("nro_licitacion",
                                    "urgencia_impostergable",
                                    "seguridad_nacional",
                                    "precalificacion",
+                                   "con_suspension",
                                    "fecha_publicacion_lla", 
                                    "anho_fecha_publicacion_lla",
                                    "mesnro_fecha_publicacion_lla",
