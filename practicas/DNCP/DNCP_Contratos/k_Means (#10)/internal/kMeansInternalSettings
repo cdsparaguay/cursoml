@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="kMeans">
+<entry key="dimensions" type="xint" value="5"/>
+<entry key="ignoredColumns" type="xint" value="0"/>
+<config key="clusterCoverage">
+<entry key="array-size" type="xint" value="3"/>
+<entry key="0" type="xint" value="3188"/>
+<entry key="1" type="xint" value="14838"/>
+<entry key="2" type="xint" value="2612"/>
+</config>
+<config key="kMeansCluster0">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="0.0018692614834364062"/>
+<entry key="1" type="xdouble" value="1.0"/>
+<entry key="2" type="xdouble" value="0.13770388958594731"/>
+<entry key="3" type="xdouble" value="0.33512497473428027"/>
+<entry key="4" type="xdouble" value="0.4244258260333518"/>
+</config>
+<config key="kMeansCluster1">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="1.9615481749352592E-4"/>
+<entry key="1" type="xdouble" value="0.0"/>
+<entry key="2" type="xdouble" value="0.0"/>
+<entry key="3" type="xdouble" value="0.29023842504111147"/>
+<entry key="4" type="xdouble" value="0.35716787354049045"/>
+</config>
+<config key="kMeansCluster2">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="6.682818331433708E-4"/>
+<entry key="1" type="xdouble" value="0.0"/>
+<entry key="2" type="xdouble" value="0.0"/>
+<entry key="3" type="xdouble" value="0.31489163877730464"/>
+<entry key="4" type="xdouble" value="0.4493175981359866"/>
+</config>
+<config key="FeatureNames">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xstring" value="monto_adjudicado_gs"/>
+<entry key="1" type="xstring" value="con_proceso"/>
+<entry key="2" type="xstring" value="con_suspension"/>
+<entry key="3" type="xstring" value="diasPublicacionApertura"/>
+<entry key="4" type="xstring" value="diasPublicacionContrato"/>
+</config>
+</config>

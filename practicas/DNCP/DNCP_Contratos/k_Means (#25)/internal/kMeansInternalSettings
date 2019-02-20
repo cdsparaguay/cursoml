@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="kMeans">
+<entry key="dimensions" type="xint" value="6"/>
+<entry key="ignoredColumns" type="xint" value="0"/>
+<config key="clusterCoverage">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xint" value="1506"/>
+<entry key="1" type="xint" value="4903"/>
+<entry key="2" type="xint" value="12839"/>
+<entry key="3" type="xint" value="4579"/>
+<entry key="4" type="xint" value="5657"/>
+</config>
+<config key="kMeansCluster0">
+<entry key="array-size" type="xint" value="6"/>
+<entry key="0" type="xdouble" value="8.109390274342151E-5"/>
+<entry key="1" type="xdouble" value="0.0"/>
+<entry key="2" type="xdouble" value="0.2969742105539333"/>
+<entry key="3" type="xdouble" value="0.3867737345828641"/>
+<entry key="4" type="xdouble" value="0.05882027445772463"/>
+<entry key="5" type="xdouble" value="5.533421868083222E-5"/>
+</config>
+<config key="kMeansCluster1">
+<entry key="array-size" type="xint" value="6"/>
+<entry key="0" type="xdouble" value="2.988764018703935E-4"/>
+<entry key="1" type="xdouble" value="0.0"/>
+<entry key="2" type="xdouble" value="0.29699421047965463"/>
+<entry key="3" type="xdouble" value="0.37832393073382115"/>
+<entry key="4" type="xdouble" value="0.06077911482765652"/>
+<entry key="5" type="xdouble" value="0.11035760418790934"/>
+</config>
+<config key="kMeansCluster2">
+<entry key="array-size" type="xint" value="6"/>
+<entry key="0" type="xdouble" value="2.1408724256900675E-4"/>
+<entry key="1" type="xdouble" value="0.0"/>
+<entry key="2" type="xdouble" value="0.29329851035658855"/>
+<entry key="3" type="xdouble" value="0.3683716278747281"/>
+<entry key="4" type="xdouble" value="0.36709439987537684"/>
+<entry key="5" type="xdouble" value="0.0765635952955918"/>
+</config>
+<config key="kMeansCluster3">
+<entry key="array-size" type="xint" value="6"/>
+<entry key="0" type="xdouble" value="0.0021542028408780985"/>
+<entry key="1" type="xdouble" value="1.0"/>
+<entry key="2" type="xdouble" value="0.33602789528779153"/>
+<entry key="3" type="xdouble" value="0.4257978315820651"/>
+<entry key="4" type="xdouble" value="0.320948897139112"/>
+<entry key="5" type="xdouble" value="0.1281029336827555"/>
+</config>
+<config key="kMeansCluster4">
+<entry key="array-size" type="xint" value="6"/>
+<entry key="0" type="xdouble" value="3.8900135173054235E-4"/>
+<entry key="1" type="xdouble" value="0.0"/>
+<entry key="2" type="xdouble" value="0.2917941190219158"/>
+<entry key="3" type="xdouble" value="0.3657261946715732"/>
+<entry key="4" type="xdouble" value="0.6814713334511702"/>
+<entry key="5" type="xdouble" value="0.11108655942490184"/>
+</config>
+<config key="FeatureNames">
+<entry key="array-size" type="xint" value="6"/>
+<entry key="0" type="xstring" value="monto_adjudicado_gs"/>
+<entry key="1" type="xstring" value="con_proceso"/>
+<entry key="2" type="xstring" value="diasPublicacionApertura"/>
+<entry key="3" type="xstring" value="diasPublicacionContrato"/>
+<entry key="4" type="xstring" value="categoria (to number)"/>
+<entry key="5" type="xstring" value="tipo_procedimiento (to number)"/>
+</config>
+</config>

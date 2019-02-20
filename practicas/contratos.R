@@ -150,5 +150,18 @@ contratosFiltrados = contratos[,c("nro_licitacion",
                                    "diasPublicacionContrato",
                                    "diasAmpliacionContrato")]
 
+contratosFiltrados$con_proceso = as.numeric(contratosFiltrados$con_proceso)
+contratosFiltrados$subasta = as.numeric(contratosFiltrados$subasta)
+contratosFiltrados$plurianual = as.numeric(contratosFiltrados$plurianual)
+contratosFiltrados$contrato_abierto = as.numeric(contratosFiltrados$contrato_abierto)
+contratosFiltrados$fonacide = as.numeric(contratosFiltrados$fonacide)
+contratosFiltrados$abastecimiento_simultaneo = as.numeric(contratosFiltrados$abastecimiento_simultaneo)
+contratosFiltrados$adreferendum = as.numeric(contratosFiltrados$adreferendum)
+contratosFiltrados$licitacion_sin_difusion = as.numeric(contratosFiltrados$licitacion_sin_difusion)
+contratosFiltrados$urgencia_impostergable = as.numeric(contratosFiltrados$urgencia_impostergable)
+contratosFiltrados$seguridad_nacional = as.numeric(contratosFiltrados$seguridad_nacional)
+contratosFiltrados$precalificacion = as.numeric(contratosFiltrados$precalificacion)
+contratosFiltrados$con_suspension = as.numeric(contratosFiltrados$con_suspension)
+
 write.csv(contratosFiltrados,'contratos_17_18_procesados.csv',row.names = F, na = "")
 
