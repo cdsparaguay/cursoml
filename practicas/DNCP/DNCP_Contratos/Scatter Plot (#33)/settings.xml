@@ -10,7 +10,7 @@
 <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
-<entry key="end" type="xint" value="5000"/>
+<entry key="end" type="xint" value="10000"/>
 <config key="max_nominal_values_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -19,10 +19,6 @@
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
 <entry key="state" type="xstring" value="EXECUTED"/>
-<config key="nodecontainer_message">
-<entry key="type" type="xstring" value="WARNING"/>
-<entry key="message" type="xstring" value="Only the first 5000 rows are displayed."/>
-</config>
 <entry key="factory" type="xstring" value="org.knime.base.node.viz.plotter.scatter.ScatterPlotterNodeFactory"/>
 <entry key="node-name" type="xstring" value="Scatter Plot"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -40,6 +36,6 @@
 <config key="ports"/>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" value="b63b869b-c3a7-4789-a2bc-eb5b9aa0a2aa"/>
+<entry key="file_store_id" type="xstring" value="7a56d55f-8200-439e-a03d-a19c7653d67f"/>
 </config>
 </config>

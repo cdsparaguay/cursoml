@@ -34,11 +34,7 @@
 <config key="column_type">
 <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
 </config>
-<config key="column_domain">
-<config key="possible_values">
-<entry key="array-size" type="xint" value="0"/>
-</config>
-</config>
+<config key="column_domain"/>
 <config key="column_properties"/>
 </config>
 <config key="column_spec_2">
@@ -379,11 +375,7 @@
 <config key="column_type">
 <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
 </config>
-<config key="column_domain">
-<config key="possible_values">
-<entry key="array-size" type="xint" value="0"/>
-</config>
-</config>
+<config key="column_domain"/>
 <config key="column_properties"/>
 </config>
 <config key="column_spec_7">
@@ -733,11 +725,7 @@
 <config key="column_type">
 <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
 </config>
-<config key="column_domain">
-<config key="possible_values">
-<entry key="array-size" type="xint" value="0"/>
-</config>
-</config>
+<config key="column_domain"/>
 <config key="column_properties"/>
 </config>
 <config key="column_spec_22">
@@ -883,11 +871,7 @@
 <config key="column_type">
 <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
 </config>
-<config key="column_domain">
-<config key="possible_values">
-<entry key="array-size" type="xint" value="0"/>
-</config>
-</config>
+<config key="column_domain"/>
 <config key="column_properties"/>
 </config>
 <config key="column_spec_26">
@@ -1033,11 +1017,7 @@
 <config key="column_type">
 <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
 </config>
-<config key="column_domain">
-<config key="possible_values">
-<entry key="array-size" type="xint" value="0"/>
-</config>
-</config>
+<config key="column_domain"/>
 <config key="column_properties"/>
 </config>
 <config key="column_spec_30">
@@ -1183,11 +1163,7 @@
 <config key="column_type">
 <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
 </config>
-<config key="column_domain">
-<config key="possible_values">
-<entry key="array-size" type="xint" value="0"/>
-</config>
-</config>
+<config key="column_domain"/>
 <config key="column_properties"/>
 </config>
 <config key="column_spec_34">
@@ -1333,11 +1309,7 @@
 <config key="column_type">
 <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
 </config>
-<config key="column_domain">
-<config key="possible_values">
-<entry key="array-size" type="xint" value="0"/>
-</config>
-</config>
+<config key="column_domain"/>
 <config key="column_properties"/>
 </config>
 <config key="column_spec_38">

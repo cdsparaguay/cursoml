@@ -13,23 +13,35 @@
 <entry key="0" type="xstring" value="diasPublicacionApertura"/>
 </config>
 <config key="excluded_names">
-<entry key="array-size" type="xint" value="16"/>
+<entry key="array-size" type="xint" value="28"/>
 <entry key="0" type="xstring" value="nro_licitacion"/>
 <entry key="1" type="xstring" value="monto_adjudicado_gs"/>
-<entry key="2" type="xstring" value="anho_fecha_publicacion_lla"/>
-<entry key="3" type="xstring" value="mesnro_fecha_publicacion_lla"/>
-<entry key="4" type="xstring" value="anho_fecha_apertura"/>
-<entry key="5" type="xstring" value="mesnro_fecha_apertura"/>
-<entry key="6" type="xstring" value="anho_fecha_publicacion_adj"/>
-<entry key="7" type="xstring" value="mesnro_fecha_publicacion_adj"/>
-<entry key="8" type="xstring" value="anho_fecha_firma_contrato"/>
-<entry key="9" type="xstring" value="mesnro_fecha_firma_contrato"/>
-<entry key="10" type="xstring" value="anho_fecha_publicacion_amp"/>
-<entry key="11" type="xstring" value="mesnro_fecha_publicacion_amp"/>
-<entry key="12" type="xstring" value="diasAperturaAdjudicacion"/>
-<entry key="13" type="xstring" value="diasAdjudicacionContrato"/>
-<entry key="14" type="xstring" value="diasPublicacionContrato"/>
-<entry key="15" type="xstring" value="diasAmpliacionContrato"/>
+<entry key="2" type="xstring" value="con_proceso"/>
+<entry key="3" type="xstring" value="subasta"/>
+<entry key="4" type="xstring" value="plurianual"/>
+<entry key="5" type="xstring" value="contrato_abierto"/>
+<entry key="6" type="xstring" value="fonacide"/>
+<entry key="7" type="xstring" value="abastecimiento_simultaneo"/>
+<entry key="8" type="xstring" value="adreferendum"/>
+<entry key="9" type="xstring" value="licitacion_sin_difusion"/>
+<entry key="10" type="xstring" value="urgencia_impostergable"/>
+<entry key="11" type="xstring" value="seguridad_nacional"/>
+<entry key="12" type="xstring" value="precalificacion"/>
+<entry key="13" type="xstring" value="con_suspension"/>
+<entry key="14" type="xstring" value="anho_fecha_publicacion_lla"/>
+<entry key="15" type="xstring" value="mesnro_fecha_publicacion_lla"/>
+<entry key="16" type="xstring" value="anho_fecha_apertura"/>
+<entry key="17" type="xstring" value="mesnro_fecha_apertura"/>
+<entry key="18" type="xstring" value="anho_fecha_publicacion_adj"/>
+<entry key="19" type="xstring" value="mesnro_fecha_publicacion_adj"/>
+<entry key="20" type="xstring" value="anho_fecha_firma_contrato"/>
+<entry key="21" type="xstring" value="mesnro_fecha_firma_contrato"/>
+<entry key="22" type="xstring" value="anho_fecha_publicacion_amp"/>
+<entry key="23" type="xstring" value="mesnro_fecha_publicacion_amp"/>
+<entry key="24" type="xstring" value="diasAperturaAdjudicacion"/>
+<entry key="25" type="xstring" value="diasAdjudicacionContrato"/>
+<entry key="26" type="xstring" value="diasPublicacionContrato"/>
+<entry key="27" type="xstring" value="diasAmpliacionContrato"/>
 </config>
 <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
 <config key="name_pattern">
@@ -69,11 +81,7 @@
 <entry key="roundingMode" type="xstring" value="HALF_UP"/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
-<entry key="state" type="xstring" value="CONFIGURED"/>
-<config key="nodecontainer_message">
-<entry key="type" type="xstring" value="ERROR"/>
-<entry key="message" type="xstring" value="Execute failed: (&quot;NullPointerException&quot;): null"/>
-</config>
+<entry key="state" type="xstring" value="EXECUTED"/>
 <entry key="factory" type="xstring" value="org.knime.base.node.preproc.autobinner3.AutoBinnerLearnNodeFactory"/>
 <entry key="node-name" type="xstring" value="Auto-Binner"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -86,20 +94,28 @@
 <entry key="node-feature-version" type="xstring" value="3.4.2.v201711100944"/>
 <config key="factory_settings"/>
 <entry key="name" type="xstring" value="Auto-Binner"/>
-<entry key="hasContent" type="xboolean" value="false"/>
+<entry key="hasContent" type="xboolean" value="true"/>
 <entry key="isInactive" type="xboolean" value="false"/>
 <config key="ports">
 <config key="port_1">
 <entry key="index" type="xint" value="1"/>
-<entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+<entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+<entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+<entry key="port_object_summary" type="xstring" value="Rows: 2865, Cols: 47"/>
+<entry key="port_dir_location" type="xstring" value="port_1"/>
 </config>
 <config key="port_2">
 <entry key="index" type="xint" value="2"/>
-<entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+<entry key="port_spec_class" type="xstring" value="org.knime.base.node.preproc.autobinner.pmml.PMMLDiscretizePreprocPortObjectSpec"/>
+<entry key="port_object_class" type="xstring" value="org.knime.base.node.preproc.autobinner.pmml.PMMLDiscretizePreprocPortObject"/>
+<entry key="port_object_summary" type="xstring" value="Discretized columns : [diasPublicacionApertura [Binned]]%%00010"/>
+<entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
+<entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
+<entry key="port_dir_location" type="xstring" value="port_2"/>
 </config>
 </config>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" isnull="true" value=""/>
+<entry key="file_store_id" type="xstring" value="33e2247b-c309-4427-b12b-506b8da0e9b0"/>
 </config>
 </config>
